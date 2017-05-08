@@ -74,7 +74,7 @@ abstract class Object implements ObjectInterface, \JsonSerializable, \ArrayAcces
     }
 
     /**
-     * This should be compulsory in the constructor int he future,
+     * This should be compulsory in the constructor in the future,
      * but will have to be like this for BC until the next major version.
      *
      * @param Application $application
@@ -165,6 +165,7 @@ abstract class Object implements ObjectInterface, \JsonSerializable, \ArrayAcces
      */
     public function fromStringArray($input_array, $replace_data = false)
     {
+
         foreach (static::getProperties() as $property => $meta) {
             $type = $meta[self::KEY_TYPE];
             $php_type = $meta[self::KEY_PHP_TYPE];
